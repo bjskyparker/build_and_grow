@@ -1,12 +1,17 @@
-import { Provider } from 'react-redux'
 import './App.css';
+import BasicTable from './components';
+//import mock_data from '../components/mock_data.json';
 
 function App() {
   return (
     <div className="App">
-      <Provider>
-        <App/>
-      </Provider>
+      <p>
+        Hello there...
+      </p>
+      {/* {mock_data.map() => {
+        return 
+      }} */}
+      <BasicTable />
     </div>
   );
 }

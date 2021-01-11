@@ -1,27 +1,19 @@
 export const columns = [
+  {
+    Header: "id",
 
-    {
+    Accessor: "id",
+  },
 
-        Header: 'id',
+  {
+    Header: "name",
 
-        Accessor: 'id'
+    Accessor: "name",
+  },
 
-    },
+  {
+    Header: "email",
 
-    {
-
-        Header: 'name',
-
-        Accessor: 'name'
-
-    },
-
-    {
-
-        Header: 'email',
-
-        Accessor: 'email'
-
-    },
-
-]
+    Accessor: "email",
+  },
+];
