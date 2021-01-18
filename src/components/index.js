@@ -1,11 +1,9 @@
-import React, { useMemo } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
 import mock_data from "./mock_data.json";
 import { columns } from "./columns";
+import Forms from "./Forms";
 
 const BasicTable = () => {
-  const columns = useMemo(() => columns, []);
-  const data = useMemo(() => mock_data, []);
 
   return (
     <table>
@@ -18,7 +16,7 @@ const BasicTable = () => {
       </thead>
 
       <tbody>
-        {data.map((row) => {
+        {mock_data.map((row) => {
           return (
             <tr>
               {columns.map((column) => {
