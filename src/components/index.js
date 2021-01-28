@@ -1,7 +1,7 @@
 import React from "react";
 import mock_data from "./mock_data.json";
 import { columns } from "./columns";
-import Forms from "./Forms";
+import { connect } from "react-redux";
 
 const BasicTable = () => {
 
@@ -32,4 +32,4 @@ const BasicTable = () => {
   );
 };
 
-export default BasicTable;
+export default connect() (BasicTable);

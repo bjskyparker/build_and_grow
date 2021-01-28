@@ -12,22 +12,22 @@ const Forms = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
+      <div>
         Name:
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-      </label>
-      <label>
+      </div>
+      <div>
         Email:
         <input
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-      </label>
+      </div>
       <input type="submit" value="Submit" />
     </form>
   );
