@@ -1,18 +1,10 @@
-import React, { useRef } from "react";
-import mock_data from "./mock_data.json";
+import React from "react";
 import { columns } from "./columns";
-import { connect } from "react-redux";
 
-const BasicTable = (props) => {
-  const table = useRef(null);
+const BasicTable = ({data}) => {
 
   return (
     <div>
-      {/* <columns 
-        data={mock_data}
-        tableRef={table} 
-      /> */}
-
       <table>
         <thead>
           <tr>
@@ -23,7 +15,7 @@ const BasicTable = (props) => {
         </thead>
 
         <tbody>
-          {mock_data.map((row) => {
+          {data.map((row) => {
             return (
               <tr>
                 {columns.map((column) => {
@@ -40,4 +32,4 @@ const BasicTable = (props) => {
   );
 };
 
-export default connect() (BasicTable);
+export default BasicTable;
