@@ -1,6 +1,14 @@
 import React from "react";
 
 const BasicTable = ({data, columns}) => {
+
+  const filteredData = (data, column.Accessor, filteredValue) => {
+    return data.filter(item => {
+      const value = item[key]
+      return value.toLowerCase().includes(filteredValue.toLowerCase())
+    })
+  };
+  
   return (
     <>
       {columns ? (
