@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const BasicTable = ({data, columns}) => {
+const [q, setQ] = useState("");
 
-  const filteredData = (data, column.Accessor, filteredValue) => {
+  const filteredData = (data, key, filteredValue) => {
     return data.filter(item => {
       const value = item[key]
-      return value.toLowerCase().includes(filteredValue.toLowerCase())
+      return value.toLowerCase().includes(filteredValue.toLowerCase().indexOf(q)) > -1 
     })
   };
   
@@ -15,6 +16,7 @@ const BasicTable = ({data, columns}) => {
         <div>
           <table>
             <thead>
+              <input type="text" value={q} onChange={(e) => setQ(e.target.value)} />
               <tr>
                 {columns.map((column) => (
                   <th>{column.Header}</th>
